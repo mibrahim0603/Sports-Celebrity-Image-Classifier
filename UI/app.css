@@ -1,0 +1,43 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.profile-img {
+    height: 12vw;
+    object-fit: cover;
+}
+
+.player-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover-zoom effects apply across standard browser engines smoothly */
+.player-card:hover {
+    cursor: pointer;
+    border-color: #28a745;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.dropzone-container {
+    background: white !important;
+    border: 2px dashed #007bff !important;
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 180px;
+}
+
+.dropzone-container:hover {
+    background-color: #f1f8ff !important;
+}
+
+#resultHolder .player-card:hover {
+    transform: none !important;
+    cursor: default !important;
+    border-color: transparent !important;
+}
+
+.classification-btn {
+    font-weight: 600;
+}

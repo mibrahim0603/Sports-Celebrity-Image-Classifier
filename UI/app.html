@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Celebrity Image Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">Sports Celebrity Classifier</a>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col card-holder" data-player="lionel_messi">
+                <div class="card bg-lightText text-center player-card">
+                    <img class="card-img-top profile-img" src="./messi.jpeg" alt="Lionel Messi">
+                    <div class="card-body p-2">
+                        <h6 class="card-title m-0">Lionel Messi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-holder" data-player="maria_sharapova">
+                <div class="card bg-lightText text-center player-card">
+                    <img class="card-img-top profile-img" src="./sharapova.jpeg" alt="Maria Sharapova">
+                    <div class="card-body p-2">
+                        <h6 class="card-title m-0">Maria Sharapova</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-holder" data-player="roger_federer">
+                <div class="card bg-lightText text-center player-card">
+                    <img class="card-img-top profile-img" src="./federer.jpeg" alt="Roger Federer">
+                    <div class="card-body p-2">
+                        <h6 class="card-title m-0">Roger Federer</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-holder" data-player="serena_williams">
+                <div class="card bg-lightText text-center player-card">
+                    <img class="card-img-top profile-img" src="./serena.jpeg" alt="Serena Williams">
+                    <div class="card-body p-2">
+                        <h6 class="card-title m-0">Serena Williams</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-holder" data-player="virat_kohli">
+                <div class="card bg-lightText text-center player-card">
+                    <img class="card-img-top profile-img" src="./virat.jpeg" alt="Virat Kohli">
+                    <div class="card-body p-2">
+                        <h6 class="card-title m-0">Virat Kohli</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="dropzone" class="dropzone-container text-center border p-5 bg-white">
+                            <img src="./upload.png" alt="Upload Icon" width="50vw" class="mb-2"><br>
+                            <span class="text-muted">Drop files here or click to upload</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <button id="submitBtn" class="btn btn-success classification-btn w-50">Classify</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-12 col-sm-5 text-center" id="resultHolder">
+                    </div>
+                    <div class="col-12 col-sm-7" id="divClassTable">
+                        <table class="table table-bordered table-sm text-center">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Player</th>
+                                    <th>Probability Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lionel Messi</td>
+                                    <td id="score_lionel_messi">--</td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Sharapova</td>
+                                    <td id="score_maria_sharapova">--</td>
+                                </tr>
+                                <tr>
+                                    <td>Roger Federer</td>
+                                    <td id="score_roger_federer">--</td>
+                                </tr>
+                                <tr>
+                                    <td>Serena Williams</td>
+                                    <td id="score_serena_williams">--</td>
+                                </tr>
+                                <tr>
+                                    <td>Virat Kohli</td>
+                                    <td id="score_virat_kohli">--</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12 text-center" id="error">
+                        <div class="alert alert-danger">
+                            Can't classify image. Classifier was not able to detect a clear face and two eyes properly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

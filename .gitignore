@@ -1,0 +1,12 @@
+# Ignore Python virtual environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Ignore raw dataset image folders (they are too heavy)
+model/dataset/
+model/images_dataset/
+
+# Optional: If your model pickle file is over 100MB, uncomment the line below:
+# *.pkl
